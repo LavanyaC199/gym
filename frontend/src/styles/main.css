@@ -1,0 +1,400 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.auth-bg {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1554284126-aa88f22d8b74");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.auth-card input,
+.auth-card select,
+.auth-card button {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.navbar {
+  background: #111;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard {
+  padding: 20px;
+}
+/* ===== CARDS ===== */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: #ff6b35;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #e85a24;
+}
+
+.btn-danger {
+  background: #e63946;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #c62828;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #ff6b35;
+  color: #ff6b35;
+}
+
+.btn-outline:hover {
+  background: #ff6b35;
+  color: white;
+}
+
+/* ===== USER TABLE ===== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+.table th {
+  background: #f8f8f8;
+}
+/* ===== AUTH HEADER ===== */
+.auth-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-header h2 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.auth-header p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* ===== MODERN FORM ===== */
+.modern-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ===== FLOATING INPUT ===== */
+.input-group {
+  position: relative;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 14px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+.input-group label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  padding: 0 6px;
+  color: #999;
+  font-size: 13px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label,
+.input-group select:focus + label {
+  top: -8px;
+  font-size: 11px;
+  color: #ff6b35;
+}
+
+/* ===== GRADIENT BUTTON ===== */
+.btn-gradient {
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(135deg, #ff6b35, #ff9f1c);
+  transition: 0.3s;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 107, 53, 0.3);
+}
+
+/* ===== AUTH LINK ===== */
+.auth-link {
+  text-align: center;
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+}
+
+.auth-link span {
+  color: #ff6b35;
+  font-weight: bold;
+}
+
+/* ===== GLASS EFFECT CARD ===== */
+.auth-card {
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.85);
+}
+.auth-bg {
+  background: url("https://images.unsplash.com/photo-1571902943202-507ec2618e8f");
+  background-size: cover;
+  background-position: center;
+}
+.login-animate {
+  animation: slideFade 0.8s ease;
+}
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.sub-text {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #ff6b35, #ff9f1c);
+  color: white;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.stat-card span {
+  font-size: 30px;
+}
+body.dark {
+  background: #121212;
+  color: white;
+}
+
+body.dark .card,
+body.dark .auth-card {
+  background: #1e1e1e;
+  color: white;
+}
+.landing {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1558611848-73f7eb4001a1");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.card p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+/* ===== INTRO PAGE ===== */
+.intro-container {
+  font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.intro-header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.intro-header nav a,
+.intro-header nav button {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1558611848-73f7eb4001a1");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 20px 0;
+  font-size: 18px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.section.light {
+  background: #f9f9f9;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.section p {
+  max-width: 800px;
+  margin: auto;
+  font-size: 16px;
+  color: #555;
+}
+
+/* FEATURES */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card span {
+  font-size: 36px;
+}
+
+/* FOOTER */
+.intro-footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.card input,
+.card textarea,
+.card select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+.btn-primary {
+  background: #ff6b35;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
