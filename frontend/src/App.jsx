@@ -10,20 +10,40 @@ import ProtectedRoute from "./components/ProtectedRoute";
 export default function App() {
   return (
     <BrowserRouter>
-      
-<Routes>
-  <Route path="/" element={<Intro />} />
-  <Route path="/login" element={<Login />} />
-  <Route path="/register" element={<Register />} />
-  <Route path="/user" element={<UserDashboard />} />
-  <Route path="/trainer" element={<TrainerDashboard />} />
-  <Route path="/admin" element={<AdminDashboard />} />
+      <Routes>
+        {/* Public Routes */}
+        <Route path="/" element={<Intro />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
 
-</Routes>
+        {/* Protected Routes */}
+        <Route
+          path="/user"
+          element={
+            <ProtectedRoute role="user">
+              <UserDashboard />
+            </ProtectedRoute>
+          }
+        />
 
-        
-     
-    
+        <Route
+          path="/trainer"
+          element={
+            <ProtectedRoute role="trainer">
+              <TrainerDashboard />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute role="admin">
+              <AdminDashboard />
+            </ProtectedRoute>
+          }
+        />
+      </Routes>
     </BrowserRouter>
   );
 }
